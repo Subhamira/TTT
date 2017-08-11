@@ -1,4 +1,4 @@
-var tictactoe = (function(){
+var  tictactoe = (function(){
 
 	var  module = {}
 
