@@ -3,10 +3,10 @@ $(function() {
 		var game = new tictactoe.Game()
 		$('.box').click(function() {
 			$this = $(this);
-			$this.html(game.player_turn);
+			//$this.html(game.player_turn);
 			game.place($this.data('x'), $this.data('y'))
-
-			game.getWinner()
+			$this.html(game.board.getBoard()[$this.data('x')][$this.data('y')])
+			//game.getWinner()
 
 			if (game.getWinner()) {
 				alert(game.getWinner() + " is winner")
